@@ -1,0 +1,268 @@
+{
+    "kind": "Template",
+    "apiVersion": "v1",
+    "metadata": {
+      "name": "text-to-speech-nodejs-app",
+      "annotations": {
+        "openshift.io/display-name": "Text to Speech Node.js App",
+        "description": "React app using the Watson Text to Speech service to transform voice audio into written text.",
+        "tags": "quickstart,nodejs,ibm,text-to-speech",
+        "iconClass": "icon-nodejs",
+        "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/text-to-speech-code-pattern uses IBM Text to Speech to convert audio into text. For information about IBM Text to Speech see https://www.ibm.com/cloud/watson-text-to-speech. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/text-to-speech-code-pattern/blob/master/README.md",
+        "openshift.io/provider-display-name": "IBM",
+        "openshift.io/documentation-url": "https://github.com/watson-developer-cloud/text-to-speech-code-pattern/blob/master/README.md",
+        "openshift.io/support-url": "https://www.ibm.com/cloud/support"
+      }
+    },
+    "message": "A Node.js app is being generated and the IBM Cloud Operator will provision an instance of Text to Speech and bind it to your app. To view your deployment navigate to your project.",
+    "labels": {
+      "template": "text-to-speech-nodejs-app",
+      "app": "text-to-speech-nodejs-app"
+    },
+    "objects": [
+      {
+        "kind": "Service",
+        "apiVersion": "ibmcloud.ibm.com/v1alpha1",
+        "metadata": {
+          "name": "${NAME}"
+        },
+        "spec": {
+          "plan": "${PLAN}",
+          "serviceClass": "text-to-speech"
+        }
+      },
+      {
+        "kind": "Binding",
+        "apiVersion": "ibmcloud.ibm.com/v1alpha1",
+        "metadata": {
+          "name": "${NAME}"
+        },
+        "spec": {
+          "serviceName": "${NAME}"
+        }
+      },
+      {
+        "kind": "Service",
+        "apiVersion": "v1",
+        "metadata": {
+          "name": "${NAME}",
+          "annotations": {
+            "description": "Exposes and load balances the application pods"
+          }
+        },
+        "spec": {
+          "ports": [
+            {
+              "name": "web",
+              "port": 5000,
+              "targetPort": 5000
+            }
+          ],
+          "selector": {
+            "name": "${NAME}"
+          }
+        }
+      },
+      {
+        "kind": "Route",
+        "apiVersion": "v1",
+        "metadata": {
+          "name": "${NAME}"
+        },
+        "spec": {
+          "to": {
+            "kind": "Service",
+            "name": "${NAME}"
+          }
+        }
+      },
+      {
+        "kind": "ImageStream",
+        "apiVersion": "v1",
+        "metadata": {
+          "name": "${NAME}",
+          "annotations": {
+            "description": "Keeps track of changes in the application image"
+          }
+        }
+      },
+      {
+        "kind": "BuildConfig",
+        "apiVersion": "v1",
+        "metadata": {
+          "name": "${NAME}",
+          "annotations": {
+            "description": "Defines how to build the application",
+            "template.alpha.openshift.io/wait-for-ready": "true"
+          }
+        },
+        "spec": {
+          "source": {
+            "type": "Git",
+            "git": {
+              "uri": "${GITHUB_REPO}",
+              "ref": "${BRANCH}"
+            }
+          },
+          "strategy": {
+            "type": "Source",
+            "dockerStrategy": {
+                "dockerfilePath": "Dockerfile"
+            }
+          },
+          "output": {
+            "to": {
+              "kind": "ImageStreamTag",
+              "name": "${NAME}:latest"
+            }
+          },
+          "triggers": [
+            {
+              "type": "ImageChange"
+            },
+            {
+              "type": "ConfigChange"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "DeploymentConfig",
+        "apiVersion": "v1",
+        "metadata": {
+          "name": "${NAME}",
+          "annotations": {
+            "description": "Defines how to deploy the application server",
+            "template.alpha.openshift.io/wait-for-ready": "true"
+          }
+        },
+        "spec": {
+          "strategy": {
+            "type": "Rolling"
+          },
+          "triggers": [
+            {
+              "type": "ImageChange",
+              "imageChangeParams": {
+                "automatic": true,
+                "containerNames": [
+                  "${NAME}"
+                ],
+                "from": {
+                  "kind": "ImageStreamTag",
+                  "name": "${NAME}:latest"
+                }
+              }
+            },
+            {
+              "type": "ConfigChange"
+            }
+          ],
+          "replicas": 1,
+          "selector": {
+            "name": "${NAME}"
+          },
+          "template": {
+            "metadata": {
+              "name": "${NAME}",
+              "labels": {
+                "name": "${NAME}"
+              }
+            },
+            "spec": {
+              "containers": [
+                {
+                  "name": "${NAME}",
+                  "image": "${NAME}",
+                  "ports": [
+                    {
+                      "containerPort": 5000
+                    }
+                  ],
+                  "env": [
+                    {
+                      "name": "TEXT_TO_SPEECH_URL", 
+                      "valueFrom": {
+                        "secretKeyRef" : {
+                          "name" : "${NAME}",
+                          "key" : "url"
+                        }
+                      }
+                    },
+                    {
+                      "name": "TEXT_TO_SPEECH_APIKEY", 
+                      "valueFrom": {
+                        "secretKeyRef" : {
+                          "name" : "${NAME}",
+                          "key" : "apikey"
+                        }
+                      }
+                    }                     
+                  ],
+                  "readinessProbe": {
+                    "timeoutSeconds": 3,
+                    "initialDelaySeconds": 3,
+                    "httpGet": {
+                      "path": "/",
+                      "port": 5000
+                    }
+                  },
+                  "livenessProbe": {
+                    "timeoutSeconds": 3,
+                    "initialDelaySeconds": 30,
+                    "httpGet": {
+                      "path": "/",
+                      "port": 5000
+                    }
+                  },
+                  "resources": {
+                    "limits": {
+                      "memory": "${MEMORY_LIMIT}"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "parameters": [
+      {
+        "name": "NAME",
+        "displayName": "Name",
+        "description": "The name for application and associated objects. Lowercase letters, numbers, and '-' only.",
+        "required": true,
+        "value": "text-to-speech-nodejs-app",
+        "from": "[a-z0-9-]{40}"
+      },
+      {
+        "name": "PLAN",
+        "displayName": "Text to Speech Plan",
+        "description": "IBM Text to Speech plan type, enter 'lite', 'standard', or 'premium'. Note: only one instance of a free 'lite' plan is allowed per account.",
+        "required": true,
+        "value": "lite"
+      },
+      {
+        "name": "GITHUB_REPO",
+        "displayName": "GitHub Repository",
+        "description": "Source code for OpenShift to build and deploy. Have your own repo? Paste it here.",
+        "required": true,
+        "value": "https://github.com/watson-developer-cloud/text-to-speech-code-pattern.git"
+      },
+      {
+        "name": "BRANCH",
+        "displayName": "Branch Name",
+        "description": "GitHub repo branch name, default is 'master'",
+        "required": true,
+        "value": "master"
+      },
+      {
+        "name": "MEMORY_LIMIT",
+        "displayName": "Memory Limit",
+        "description": "Maximum amount of memory the container can use.",
+        "required": true,
+        "value": "512Mi"
+      }
+    ]
+  }

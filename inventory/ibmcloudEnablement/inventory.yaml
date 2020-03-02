@@ -1,0 +1,26 @@
+inventory:
+ metadata:
+  name: ibmcloudEnablement
+  description: IBM Cloud Enablement data including deployment information.
+  com_ibm_deployment:
+    target: ibmcloud
+    description: Installation for IBM Cloud
+    type: roks
+    version: 0.0.1
+    install_kind: bash
+    min_configuration:
+      mem: 8
+      disk: 10
+      cores: 1
+      nodes: 1
+    single_instance: true
+    pre_install_scope: cluster
+    source_url: "https://github.com/IBM/starter-kit-collection"
+    offering_docs_url:
+    iam_roles:
+      install:
+      - Editor
+      pre_install:
+      - Adminisrator
+        Manager
+ k8sScope: cluster

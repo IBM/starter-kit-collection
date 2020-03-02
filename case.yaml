@@ -1,0 +1,24 @@
+  specVersion: 0.0.1
+  name: ibm_starter_kit_collection_for_openshift
+  displayName: "IBM Starter Kit Collection for OpenShift"
+  version: 0.0.0.1
+  description:  "The IBM Starter Kit Collection for OpenShift installs new IBM templates into the Developer Catalog for an OpenShift cluster, so developers can easily find and use them. All the templates in this collection run on OpenShift and have the ability to automatically provision and use managed services from the IBM Cloud public catalog."
+  displayDescription: "The IBM Starter Kit Collection for OpenShift displayDescription "
+  supports:
+  k8sDistros:
+    rhocp4: {}
+  webPage: https://cloud.ibm.com/docs
+  icons:
+  - base64: iVBORw0KGgoAAAAN ... ==
+    mediaType: image/png
+    url: "https://my1.digitalexperience.ibm.com/8304c341-f896-4e04-add0-0a9ae02473ba/dxdam/6f/6f066176-e999-4442-8f6f-c865b4760b79/cloud.png"
+  organization:  "IBM"
+  webPage: "http://ibm.com"
+  licenses:
+    apache2: 
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+      mediaType: application/text
+      metadata:
+        displayName: Apache 2.0
+        displayDescription: Apache License, version 2.0
