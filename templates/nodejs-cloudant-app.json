@@ -8,9 +8,9 @@
         "description": "Create example Node.js application or provide your own app, with an IBM Cloudant database instance and binding.",
         "tags": "quickstart,nodejs,ibm,cloudant",
         "iconClass": "icon-nodejs",
-        "openshift.io/long-description": "The example application at https://github.com/IBM/nodejs-cloudant uses an IBM Cloudant database to store a list of names and display the database entries in real-time. For information about IBM Cloudant see https://www.ibm.com/cloud/cloudant. For more information about using this template, including OpenShift considerations, see https://github.com/IBM/nodejs-cloudant/blob/master/readme.md",
+        "openshift.io/long-description": "The example application at https://github.com/IBM/nodejs-cloudant uses an IBM Cloudant database to store a list of names and display the database entries in real-time. For information about IBM Cloudant see https://www.ibm.com/cloud/cloudant. For more information about using this template, including OpenShift considerations, see https://github.com/IBM/nodejs-cloudant/blob/development/README.md",
         "openshift.io/provider-display-name": "IBM",
-        "openshift.io/documentation-url": "https://github.com/IBM/nodejs-cloudant/blob/master/readme.md",
+        "openshift.io/documentation-url": "https://github.com/IBM/nodejs-cloudant/blob/development/README.md",
         "openshift.io/support-url": "https://www.ibm.com/cloud/support"
       }
     },
@@ -230,14 +230,14 @@
       {
         "name": "PLAN",
         "displayName": "Cloudant Plan",
-        "description": "IBM Cloudant plan type, enter 'lite' or 'standard', or 'dedicated-hardware'. Note: only one instance of a free 'lite' plan is allowed per account.",
+        "description": "IBM Cloudant plan type, enter 'lite' or 'standard', or 'dedicated-hardware'. Note: only one instance of a free 'lite' plan is allowed per account. View the service details page for pricing information: https://cloud.ibm.com/catalog/services/cloudant",
         "required": true,
         "value": "lite"
       },
       {
         "name": "GITHUB_REPO",
         "displayName": "GitHub Repository",
-        "description": "Source code for OpenShift to build and deploy. Have your own repo? Paste it here.",
+        "description": "Source code for OpenShift to build and deploy. Using the default value will deploy out of the box. To make changes, fork the template repository and paste that here instead.",
         "required": true,
         "value": "https://github.com/IBM/nodejs-cloudant.git"
       },
@@ -251,7 +251,7 @@
       {
         "name": "MEMORY_LIMIT",
         "displayName": "Memory Limit",
-        "description": "Maximum amount of memory the container can use.",
+        "description": "Maximum amount of memory the container can use. Using the default value should work out of the box. You can modify this if you want to limit or extend the memory further.",
         "required": true,
         "value": "512Mi"
       }

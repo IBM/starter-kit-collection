@@ -239,14 +239,14 @@
       {
         "name": "PLAN",
         "displayName": "Text to Speech Plan",
-        "description": "IBM Text to Speech plan type, enter 'lite', 'standard', or 'premium'. Note: only one instance of a free 'lite' plan is allowed per account.",
+        "description": "IBM Text to Speech plan type, enter 'lite', 'standard', or 'premium'. Note: only one instance of a free 'lite' plan is allowed per account. View the service details page for pricing information: https://cloud.ibm.com/catalog/services/text-to-speech",
         "required": true,
         "value": "lite"
       },
       {
         "name": "GITHUB_REPO",
         "displayName": "GitHub Repository",
-        "description": "Source code for OpenShift to build and deploy. Have your own repo? Paste it here.",
+        "description": "Source code for OpenShift to build and deploy. Using the default value will deploy out of the box. To make changes, fork the template repository and paste that here instead.",
         "required": true,
         "value": "https://github.com/watson-developer-cloud/text-to-speech-code-pattern.git"
       },
@@ -260,7 +260,7 @@
       {
         "name": "MEMORY_LIMIT",
         "displayName": "Memory Limit",
-        "description": "Maximum amount of memory the container can use.",
+        "description": "Maximum amount of memory the container can use. Using the default value should work out of the box. You can modify this if you want to limit or extend the memory further.",
         "required": true,
         "value": "512Mi"
       }

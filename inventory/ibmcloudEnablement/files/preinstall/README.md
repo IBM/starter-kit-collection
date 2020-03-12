@@ -1,1 +1,1 @@
-There is no pre-install script for this template.
+There is no pre-install script for this template. Your administrator must navigate to OperatorHub and install the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator) to your OpenShift cluster. Starter kits with managed IBM services will have the capability to be automatically provisioned after successful installation of the operator.

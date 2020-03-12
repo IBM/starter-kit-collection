@@ -21,14 +21,17 @@ The IBM Starter Kit Collection for OpenShift installs new IBM templates into the
 
 # Details
 
+## Access Control
+* An user with at least a Manager role to Schematics, and an Administrator level in your OpenShift cluster will be necessary for the installation of the collection and the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator).
+
 ## Prerequisites
 
 * Before installing this template, you must have an OpenShift cluster on IBM Cloud.  If you don't, [create one here](https://cloud.ibm.com/kubernetes/catalog/openshiftcluster).
 > Note: Clusters may take 30 minutes or more to provision.
-* After the provisioning is complete, your administrator must navigate to OperatorHub and install the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator) to your OpenShift cluster. Starter kits with managed IBM services will have the capability to be automatically provisioned after successful installation of the operator.
+* After the provisioning of the OpenShift cluster is complete, your administrator must navigate to OperatorHub and install the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator) to your OpenShift cluster. Starter kits with managed IBM services will have the capability to be automatically provisioned after successful installation of the operator.
 
 ## Configuration
 IBM Cloud platform will use Schematics to automatically install the starter templates into your OpenShift Developer Catalog. After installation is complete (usually about 10 minutes), reload your OpenShift web console to see the new tiles in your Developer Catalog.  Click the individual starter tiles to learn more about each.
 
 ## Uninstall
-The uninstall action deletes the project and removes the starter kits from your cluster.
+When the Schematics workspace is deleted, the starter kits should get uninstalled from your cluster.

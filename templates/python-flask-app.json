@@ -198,7 +198,7 @@
       {
         "name": "GITHUB_REPO",
         "displayName": "GitHub Repository",
-        "description": "Source code for OpenShift to build and deploy. Have your own repo? Paste it here.",
+        "description": "Source code for OpenShift to build and deploy. Using the default value will deploy out of the box. To make changes, fork the template repository and paste that here instead.",
         "required": true,
         "value": "https://github.com/IBM/python-flask-app.git"
       },
@@ -212,7 +212,7 @@
       {
         "name": "MEMORY_LIMIT",
         "displayName": "Memory Limit",
-        "description": "Maximum amount of memory the container can use.",
+        "description": "Maximum amount of memory the container can use. Using the default value should work out of the box. You can modify this if you want to limit or extend the memory further.",
         "required": true,
         "value": "512Mi"
       }
