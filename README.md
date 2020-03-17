@@ -35,8 +35,12 @@ These starter kits are included in the deployment:
 2. Be sure your cluster has the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator) installed. If it doesn't, have your cluster admin install it.
 3. Download and run [this bash script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/install.sh). Be sure make the script executable `chmod +x install.sh`.
 4. When the script completes, wait a few minutes and then reload the Developer Catalog in your cluster console.  Search 'IBM' to find the newly installed starter kits. 
-> **Note:**  The new template will appear in the Developer Catalog for the `default` workspace for your cluster. They will not appear in other catalog views or the Administrator Catalog unless you specify those workspaces during installation. 
-5. If you would like to uninstall the starters kits, you can download and run the [uninstall script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/uninstall.sh).
+
+> **Installation tips:**
+> - The new template will appear in the Developer Catalog for the `default` project for your cluster.  You can add the starters to other projects by modifying the install script to include the '-n' flag.  For example, `oc apply -f templates/go-gin-app.json -n test_project` will install the starter in the project named 'test_project', and `oc apply -f templates/go-gin-app.json -n openshift` will install the starter into the cluster Service Catalog.
+> - If you would like to uninstall a single starter, you can run the oc delete command from your terminal:  `oc delete -f templates/go-gin-app.json -n test_project`
+> - If you would like to uninstall all the starters in the collection, you can download and run the [uninstall script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/uninstall.sh).
+
 
 ## License
 
