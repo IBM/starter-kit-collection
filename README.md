@@ -32,10 +32,11 @@ These starter kits are included in the deployment:
 
 ## Steps
 1. [Log in to IBM Cloud](https://cloud.ibm.com/docs/cli?topic=cloud-cli-ibmcloud_cli#ibmcloud_login) and [connect to your OpenShift cluster](https://cloud.ibm.com/docs/openshift?topic=openshift-access_cluster).
-2. Be sure your cluster has the [IBM Cloud Operator] (https://operatorhub.io/operator/ibmcloud-operator) installed.  If it doesn't, have your cluster admin install it.
-3. Download and run [this bash script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/install.sh).  Be sure make the script executable 'chmod +x install.sh'.
-4. When the script completes, wait a few minutes and then reload the Developer Catalog in your cluster console.  Search on 'IBM' to find the newly installed starter kits.  NOTE:  The new template will appear in the Developer Catalog for the 'default' workspace for your cluster.  They will not appear in other catalog views or the Administrator Catalog unless you specify those workspaces during installation. 
-5. If you would like to uninstall, the starters, you can download and run the [uninstall script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/uninstall.sh).
+2. Be sure your cluster has the [IBM Cloud Operator](https://operatorhub.io/operator/ibmcloud-operator) installed.  If it doesn't, have your cluster admin install it.
+3. Download and run [this bash script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/install.sh). Be sure make the script executable `chmod +x install.sh`.
+4. When the script completes, wait a few minutes and then reload the Developer Catalog in your cluster console.  Search on 'IBM' to find the newly installed starter kits. 
+> **Note**:  The new template will appear in the Developer Catalog for the `default` workspace for your cluster.  They will not appear in other catalog views or the Administrator Catalog unless you specify those workspaces during installation. 
+5. If you would like to uninstall the starters kits, you can download and run the [uninstall script](https://github.com/IBM/starter-kit-collection/blob/master/inventory/ibmcloudEnablement/files/install/uninstall.sh).
 
 ## License
 
