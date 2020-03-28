@@ -5,7 +5,7 @@
       "name": "nodejs-express-app",
       "annotations": {
         "openshift.io/display-name": "Node.js Express App",
-        "description": "Start building your next Node.js Express app on IBM Cloud.",
+        "description": "Start building your next Node.js Express app on OpenShift.",
         "tags": "quickstart,nodejs,ibm",
         "iconClass": "icon-nodejs",
         "openshift.io/long-description": "The example application at https://github.com/IBM/nodejs-express-app creates a microservice using Express in Node.js, complete with standard best practices. A microservice is an individual component of an application that follows the microservice architecture - an architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities. The microservice exposes a RESTful API matching a Swagger definition.",
