@@ -4,8 +4,8 @@
     "metadata": {
       "name": "visual-recognition-nodejs-app",
       "annotations": {
-        "openshift.io/display-name": "Visual Recognition Node.js App",
-        "description": "React app using the Watson Visual Recognition service to analyze images for scenes, objects, text, and other subjects.",
+        "openshift.io/display-name": "Visual Recognition Node.js App (BETA)",
+        "description": "React app using the Watson Visual Recognition service to analyze images for scenes, objects, text, and other subjects. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,visual-recognition",
         "iconClass": "icon-nodejs",
         "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/visual-recognition-code-pattern uses IBM Visual Recognition deep learning algorithms to analyze images for scenes, objects, text, and other subjects. For information about IBM Visual Recognition see https://www.ibm.com/cloud/watson-visual-recognition. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/visual-recognition-code-pattern/blob/master/README.md",

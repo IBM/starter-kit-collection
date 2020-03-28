@@ -2,10 +2,10 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-      "name": "natural-language-understanding-nodejs-app",
+      "name": "natural-language-understanding-nodejs-app (BETA)",
       "annotations": {
         "openshift.io/display-name": "Natural Language Understanding Node.js App",
-        "description": "Use Watson Natural Language Understanding to analyze text to help you understand its concepts, entities, keywords, sentiment, and more.",
+        "description": "Use Watson Natural Language Understanding to analyze text to help you understand its concepts, entities, keywords, sentiment, and more. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,natural-language-understanding",
         "iconClass": "icon-nodejs",
         "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern uses IBM Natural Language Understanding to analyze a news article or other content. For information about IBM Natural Language Understanding see https://www.ibm.com/cloud/watson-natural-language-understanding. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern/blob/master/README.md",
