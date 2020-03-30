@@ -4,8 +4,8 @@
     "metadata": {
       "name": "speech-to-text-nodejs-app",
       "annotations": {
-        "openshift.io/display-name": "Speech to Text Node.js App",
-        "description": "React app using the Watson Speech to Text service to transform voice audio into written text.",
+        "openshift.io/display-name": "Speech to Text Node.js App (BETA)",
+        "description": "React app using the Watson Speech to Text service to transform voice audio into written text.  This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,speech-to-text",
         "iconClass": "icon-nodejs",
         "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/speech-to-text-code-pattern uses IBM Speech to Text to convert audio into text. For information about IBM Speech to Text see https://www.ibm.com/cloud/watson-speech-to-text. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/speech-to-text-code-pattern/blob/master/README.md",

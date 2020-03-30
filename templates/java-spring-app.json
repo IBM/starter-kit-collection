@@ -5,7 +5,7 @@
       "name": "java-spring-app",
       "annotations": {
         "openshift.io/display-name": "Java Spring App",
-        "description": "Start building your next Java Spring app on IBM Cloud.",
+        "description": "Start building your next Java Spring app on OpenShift.",
         "tags": "quickstart,java,ibm",
         "iconClass": "icon-java",
         "openshift.io/long-description": "The example application at https://github.com/IBM/java-spring-app creates a microservice using Spring in Java, complete with standard best practices. A microservice is an individual component of an application that follows the microservice architecture - an architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities. The microservice exposes a RESTful API matching a Swagger definition.",
