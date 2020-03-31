@@ -4,7 +4,7 @@
     "metadata": {
       "name": "visual-recognition-nodejs-app",
       "annotations": {
-        "openshift.io/display-name": "Visual Recognition Node.js App (BETA)",
+        "openshift.io/display-name": "Visual Recognition Node.js App",
         "description": "React app using the Watson Visual Recognition service to analyze images for scenes, objects, text, and other subjects. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,visual-recognition",
         "iconClass": "icon-nodejs",
@@ -197,7 +197,7 @@
                           "key" : "apikey"
                         }
                       }
-                    }                     
+                    }
                   ],
                   "readinessProbe": {
                     "timeoutSeconds": 3,

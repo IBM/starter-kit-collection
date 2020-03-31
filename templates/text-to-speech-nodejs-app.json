@@ -4,7 +4,7 @@
     "metadata": {
       "name": "text-to-speech-nodejs-app",
       "annotations": {
-        "openshift.io/display-name": "Text to Speech Node.js App (BETA)",
+        "openshift.io/display-name": "Text to Speech Node.js App",
         "description": "React app using the Watson Text to Speech service to transform voice audio into written text. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,text-to-speech",
         "iconClass": "icon-nodejs",
@@ -197,7 +197,7 @@
                           "key" : "apikey"
                         }
                       }
-                    }                     
+                    }
                   ],
                   "readinessProbe": {
                     "timeoutSeconds": 3,

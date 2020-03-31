@@ -2,7 +2,7 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-      "name": "natural-language-understanding-nodejs-app (BETA)",
+      "name": "natural-language-understanding-nodejs-app",
       "annotations": {
         "openshift.io/display-name": "Natural Language Understanding Node.js App",
         "description": "Use Watson Natural Language Understanding to analyze text to help you understand its concepts, entities, keywords, sentiment, and more. This template is currently in Beta.",
@@ -197,7 +197,7 @@
                           "key" : "apikey"
                         }
                       }
-                    }                     
+                    }
                   ],
                   "readinessProbe": {
                     "timeoutSeconds": 3,
