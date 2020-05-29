@@ -8,9 +8,9 @@
         "description": "React app using the Watson Visual Recognition service to analyze images for scenes, objects, text, and other subjects. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,visual-recognition",
         "iconClass": "icon-nodejs",
-        "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/visual-recognition-code-pattern uses IBM Visual Recognition deep learning algorithms to analyze images for scenes, objects, text, and other subjects. For information about IBM Visual Recognition see https://www.ibm.com/cloud/watson-visual-recognition. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/visual-recognition-code-pattern/blob/master/README.md",
+        "openshift.io/long-description": "The example application at https://github.com/IBM/visual-recognition-code-pattern uses IBM Visual Recognition deep learning algorithms to analyze images for scenes, objects, text, and other subjects. For information about IBM Visual Recognition see https://www.ibm.com/cloud/watson-visual-recognition. For more information about using this template, including OpenShift considerations, see https://github.com/IBM/visual-recognition-code-pattern/blob/master/README.md",
         "openshift.io/provider-display-name": "IBM",
-        "openshift.io/documentation-url": "https://github.com/watson-developer-cloud/visual-recognition-code-pattern/blob/master/README.md",
+        "openshift.io/documentation-url": "https://github.com/IBM/visual-recognition-code-pattern/blob/master/README.md",
         "openshift.io/support-url": "https://www.ibm.com/cloud/support"
       }
     },
@@ -248,7 +248,7 @@
         "displayName": "GitHub Repository",
         "description": "Source code for OpenShift to build and deploy. Using the default value will deploy out of the box. To make changes, fork the template repository and paste that here instead.",
         "required": true,
-        "value": "https://github.com/watson-developer-cloud/visual-recognition-code-pattern.git"
+        "value": "https://github.com/IBM/visual-recognition-code-pattern.git"
       },
       {
         "name": "BRANCH",

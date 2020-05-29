@@ -8,9 +8,9 @@
         "description": "Use Watson Natural Language Understanding to analyze text to help you understand its concepts, entities, keywords, sentiment, and more. This template is currently in Beta.",
         "tags": "quickstart,nodejs,ibm,natural-language-understanding",
         "iconClass": "icon-nodejs",
-        "openshift.io/long-description": "The example application at https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern uses IBM Natural Language Understanding to analyze a news article or other content. For information about IBM Natural Language Understanding see https://www.ibm.com/cloud/watson-natural-language-understanding. For more information about using this template, including OpenShift considerations, see https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern/blob/master/README.md",
+        "openshift.io/long-description": "The example application at https://github.com/IBM/natural-language-understanding-code-pattern uses IBM Natural Language Understanding to analyze a news article or other content. For information about IBM Natural Language Understanding see https://www.ibm.com/cloud/watson-natural-language-understanding. For more information about using this template, including OpenShift considerations, see https://github.com/IBM/natural-language-understanding-code-pattern/blob/master/README.md",
         "openshift.io/provider-display-name": "IBM",
-        "openshift.io/documentation-url": "https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern/blob/master/README.md",
+        "openshift.io/documentation-url": "https://github.com/IBM/natural-language-understanding-code-pattern/blob/master/README.md",
         "openshift.io/support-url": "https://www.ibm.com/cloud/support"
       }
     },
@@ -248,7 +248,7 @@
         "displayName": "GitHub Repository",
         "description": "Source code for OpenShift to build and deploy. Using the default value will deploy out of the box. To make changes, fork the template repository and paste that here instead.",
         "required": true,
-        "value": "https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern.git"
+        "value": "https://github.com/IBM/natural-language-understanding-code-pattern.git"
       },
       {
         "name": "BRANCH",

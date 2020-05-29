@@ -15,10 +15,10 @@ The IBM Starter Kit Collection templates and installation script are open source
 | Python Django App                          | https://github.com/IBM/python-django-app                                              |
 | Java Spring App                            | https://github.com/IBM/java-spring-app                                                |
 | Node.js + Cloudant App                     | https://github.com/IBM/nodejs-cloudant                                                |
-| Text to Speech Node.js App                 | https://github.com/watson-developer-cloud/text-to-speech-code-pattern                 |
-| Speech to Text Node.js App                 | https://github.com/watson-developer-cloud/speech-to-text-code-pattern                 |
-| Visual Recognition Node.js App             | https://github.com/watson-developer-cloud/visual-recognition-code-pattern             |
-| Natural Language Understanding Node.js App | https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern |
+| Text to Speech Node.js App                 | https://github.com/IBM/text-to-speech-code-pattern                 |
+| Speech to Text Node.js App                 | https://github.com/IBM/speech-to-text-code-pattern                 |
+| Visual Recognition Node.js App             | https://github.com/IBM/visual-recognition-code-pattern             |
+| Natural Language Understanding Node.js App | https://github.com/IBM/natural-language-understanding-code-pattern |
 
 
 # Details
