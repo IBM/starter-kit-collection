@@ -27,10 +27,10 @@ These starter kits are included in the deployment:
 * [Python Django App](https://github.com/IBM/python-django-app)
 * [Java Spring App](https://github.com/IBM/java-spring-app)
 * [Node.js + Cloudant App](https://github.com/IBM/nodejs-cloudant)
-* [Text to Speech Node.js App](https://github.com/watson-developer-cloud/text-to-speech-code-pattern)
-* [Speech to Text Node.js App](https://github.com/watson-developer-cloud/speech-to-text-code-pattern)
+* [Text to Speech Node.js App](https://github.com/IBM/text-to-speech-code-pattern)
+* [Speech to Text Node.js App](https://github.com/IBM/speech-to-text-code-pattern)
 * [Visual Recognition Node.js App](https://github.com/IBM/visual-recognition-code-pattern)
-* [Natural Language Understanding Node.js App](https://github.com/watson-developer-cloud/natural-language-understanding-code-pattern)
+* [Natural Language Understanding Node.js App](https://github.com/IBM/natural-language-understanding-code-pattern)
 
 ## Steps
 1. [Log in to IBM Cloud](https://cloud.ibm.com/docs/cli?topic=cloud-cli-ibmcloud_cli#ibmcloud_login) and [connect to your OpenShift cluster](https://cloud.ibm.com/docs/openshift?topic=openshift-access_cluster).
