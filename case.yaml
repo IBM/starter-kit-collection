@@ -1,5 +1,5 @@
   specVersion: 0.0.3
-  name: starter-kit-collection-latest-release
+  name: ibm_starter_kit_collection_for_openshift
   displayName: "IBM Starter Kit Collection for OpenShift"
   version: 0.0.0.3
   description:  "The IBM Starter Kit Collection for OpenShift installs new IBM templates into the Developer Catalog for an OpenShift cluster, so developers can easily find and use them. All the templates in this collection run on OpenShift and have the ability to automatically provision and use managed services from the IBM Cloud public catalog."
